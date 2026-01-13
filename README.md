@@ -2,12 +2,14 @@
 
 Simple project: custom nginx Docker image serving a page at http://localhost:8080.
 
-## How to run
+## Features
+
+- **Dockerfile**: Multi-stage build with nginx:alpine for small image size.
+- **GitHub Actions CI/CD**: Automatically builds Docker image on every push to `main`.
+- **Local testing**: Easy to run locally for quick testing.
+
+## How to run locally
 
 1. Build image:
+   ```bash
    docker build -t pravin-nginx:v1 .
-
-2. Run container:
-   docker run --name pravin-nginx -p 8080:80 -d pravin-nginx:v1
-
-Then open http://localhost:8080 in your browser.
